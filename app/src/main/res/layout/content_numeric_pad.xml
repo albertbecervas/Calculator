@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btSeven"
+            style="@style/PadNumericButton"
+            android:text="@string/seven_numeric" />
+
+        <Button
+            android:id="@+id/btEight"
+            style="@style/PadNumericButton"
+            android:text="@string/eight_numeric" />
+
+        <Button
+            android:id="@+id/btNine"
+            style="@style/PadNumericButton"
+            android:text="@string/nine_numeric" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btFour"
+            style="@style/PadNumericButton"
+            android:text="@string/four_numeric" />
+
+        <Button
+            android:id="@+id/btFive"
+            style="@style/PadNumericButton"
+            android:text="@string/five_numeric" />
+
+        <Button
+            android:id="@+id/btSix"
+            style="@style/PadNumericButton"
+            android:text="@string/six_numeric" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btOne"
+            style="@style/PadNumericButton"
+            android:text="@string/one_numeric" />
+
+        <Button
+            android:id="@+id/btTwo"
+            style="@style/PadNumericButton"
+            android:text="@string/two_numeric" />
+
+        <Button
+            android:id="@+id/btThree"
+            style="@style/PadNumericButton"
+            android:text="@string/three_numeric" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btDot"
+            style="@style/PadNumericButton"
+            android:text="@string/dot" />
+
+        <Button
+            android:id="@+id/btZero"
+            style="@style/PadNumericButton"
+            android:text="@string/zero_numeric" />
+
+        <Button
+            android:id="@+id/btDelete"
+            style="@style/PadNumericButton"
+            android:text="@string/delete_symbol"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+    <Button
+        android:id="@+id/btDivide"
+        style="@style/PadNumericButton"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:text="@string/divide_symbol" />
+
+    <Button
+        android:id="@+id/btMultiply"
+        style="@style/PadNumericButton"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:text="@string/multiply_symbol" />
+
+    <Button
+        android:id="@+id/btSum"
+        style="@style/PadNumericButton"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:text="@string/dif_symbol" />
+
+    <Button
+        android:id="@+id/btDif"
+        style="@style/PadNumericButton"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:text="@string/sum_symbol" />
+
+    <Button
+        android:id="@+id/btEqual"
+        style="@style/PadNumericButton"
+        android:layout_weight="1"
+        android:background="@color/green_blue"
+        android:text="@string/equal_symbol" />
+
+
+</LinearLayout>

@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="one_numeric">1</string>
+    <string name="multiply_symbol">*</string>
+    <string name="dif_symbol">-</string>
+    <string name="sum_symbol">+</string>
+    <string name="equal_symbol">=</string>
+    <string name="divide_symbol">/</string>
+    <string name="seven_numeric">7</string>
+    <string name="eight_numeric">8</string>
+    <string name="nine_numeric">9</string>
+    <string name="four_numeric">4</string>
+    <string name="five_numeric">5</string>
+    <string name="six_numeric">6</string>
+    <string name="two_numeric">2</string>
+    <string name="three_numeric">3</string>
+    <string name="dot">.</string>
+    <string name="zero_numeric">0</string>
+    <string name="delete_symbol">DEL</string>
 </resources>
