@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="one_numeric">1</string>
-    <string name="multiply_symbol">X</string>
+    <string name="multiply_symbol">*</string>
     <string name="dif_symbol">-</string>
     <string name="sum_symbol">+</string>
     <string name="equal_symbol">=</string>

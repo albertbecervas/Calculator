@@ -24,12 +24,14 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
         setContentView(R.layout.activity_calculator)
 
         observe(viewModel.operationData, ::updateOperationData)
+        observe(viewModel.result, ::updateResult)
 
         setViews()
     }
 
     private fun setViews() {
         btDelete.setOnLongClickListener {
+            viewModel.clearData()
             true
         }
         btDelete.setOnClickListener(this)
@@ -56,41 +58,25 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         v?.let { view ->
             when (view.id) {
-                R.id.btZero,
-                R.id.btOne,
-                R.id.btTwo,
-                R.id.btThree,
-                R.id.btFour,
-                R.id.btFive,
-                R.id.btSix,
-                R.id.btSeven,
-                R.id.btEight,
-                R.id.btNine -> {
+                R.id.btZero, R.id.btOne, R.id.btTwo, R.id.btThree, R.id.btFour,
+                R.id.btFive, R.id.btSix, R.id.btSeven, R.id.btEight, R.id.btNine -> {
                     (view as? Button)?.text?.toString()?.let {
                         viewModel.addNumber(it.toInt())
                     }
-                    true
                 }
-                R.id.btDot -> {
-
-                }
-                R.id.btDelete -> {
-                    viewModel.clearData()
-                }
-                R.id.btDivide -> {
-
-                }
-                R.id.btMultiply -> {
-
-                }
-                R.id.btDif -> {
-
-                }
-                R.id.btSum -> {
-
+                R.id.btDivide, R.id.btMultiply, R.id.btDif, R.id.btSum -> {
+                    (view as? Button)?.text?.toString()?.let {
+                        viewModel.addOperation(it)
+                    }
                 }
                 R.id.btEqual -> {
-
+                    viewModel.calculate()
+                }
+                R.id.btDot -> {
+                    viewModel.addDot()
+                }
+                R.id.btDelete -> {
+                    viewModel.clearLastCharacter()
                 }
                 else -> {
                 }
@@ -106,6 +92,25 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
                 SUCCESS -> {
                     it.data?.let { operation ->
                         etOperation.setText(operation)
+                    }
+                }
+                ERROR -> {
+                    it.message?.let { errorMsg ->
+                        toast(errorMsg)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun updateResult(data: Data<String>?) {
+        data?.let {
+            when (it.dataState) {
+                LOADING -> {
+                }
+                SUCCESS -> {
+                    it.data?.let { result ->
+                        tvResult.text = result
                     }
                 }
                 ERROR -> {
