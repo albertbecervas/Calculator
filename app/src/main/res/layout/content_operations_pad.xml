@@ -9,35 +9,36 @@
         android:id="@+id/btDivide"
         style="@style/PadNumericButton"
         android:layout_weight="1"
-        android:background="@color/gray"
+        android:background="@color/gray_soft"
         android:text="@string/divide_symbol" />
 
     <Button
         android:id="@+id/btMultiply"
         style="@style/PadNumericButton"
         android:layout_weight="1"
-        android:background="@color/gray"
+        android:background="@color/gray_soft"
         android:text="@string/multiply_symbol" />
 
     <Button
         android:id="@+id/btSum"
         style="@style/PadNumericButton"
         android:layout_weight="1"
-        android:background="@color/gray"
+        android:background="@color/gray_soft"
         android:text="@string/dif_symbol" />
 
     <Button
         android:id="@+id/btDif"
         style="@style/PadNumericButton"
         android:layout_weight="1"
-        android:background="@color/gray"
+        android:background="@color/gray_soft"
         android:text="@string/sum_symbol" />
 
     <Button
         android:id="@+id/btEqual"
         style="@style/PadNumericButton"
         android:layout_weight="1"
-        android:background="@color/green_blue"
+        android:textColor="@color/white"
+        android:background="@color/original_blue"
         android:text="@string/equal_symbol" />
 
 

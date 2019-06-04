@@ -17,4 +17,29 @@
     <string name="dot">.</string>
     <string name="zero_numeric">0</string>
     <string name="delete_symbol">DEL</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calculator">Calculator</string>
+    <string name="finance">Finance</string>
+    <string name="percent_symbol">%</string>
+    <string name="rad_symbol">RAD</string>
+    <string name="fact_symbol">!</string>
+    <string name="sin_symbol">sin</string>
+    <string name="cos_symbol">cos</string>
+    <string name="ln_symbol">ln</string>
+    <string name="log_symbol">log</string>
+    <string name="tan_symbol">tan</string>
+    <string name="bin_symbol">bin</string>
+    <string name="hex_symbol">hex</string>
+    <string name="dec_symbol">dec</string>
+    <string name="parenthesis_open_symbol">(</string>
+    <string name="parenthesis_close_symbol">)</string>
+    <string name="sqrt_symbol">√</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="error">ERROR</string>
+    <string name="statistics">Statistics</string>
+    <string name="home">Home</string>
+    <string name="about">About</string>
 </resources>
