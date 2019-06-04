@@ -38,6 +38,10 @@ fun <T : Any, L : LiveData<T>> LifecycleOwner.observe(liveData: L, body: (T?) ->
     liveData.observe(this, Observer(body))
 }
 
+fun <T : Any, L : LiveData<Any>> LifecycleOwner.observe(liveData: L, body: () -> Unit) {
+
+}
+
 fun <T : Any, L : LiveData<T>> LifecycleOwner.observeChanges(liveData: L, body: () -> Unit) {
     liveData.observe(this, Observer { body() })
 }
@@ -67,3 +71,4 @@ fun <K> MutableLiveData<Data<K>>.updateData(data: K?, message: String? = null) {
         )
     )
 }
+

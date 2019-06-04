@@ -8,7 +8,7 @@ object ViewModelModule {
 
     fun get() = module {
         viewModel {
-            CalculatorViewModel()
+            CalculatorViewModel(get())
         }
     }
 
