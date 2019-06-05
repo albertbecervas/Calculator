@@ -12,6 +12,7 @@
 
     <style name="CustomTextViewStyle" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:fontFeatureSettings">lnum</item>
     </style>
 
     <style name="PadNumericButton" parent="Widget.AppCompat.Button">
