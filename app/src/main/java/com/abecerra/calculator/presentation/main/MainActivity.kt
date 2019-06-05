@@ -5,7 +5,7 @@ import android.support.v4.content.ContextCompat
 import com.abecerra.calculator.R
 import com.abecerra.calculator.core.base.BaseActivity
 import com.abecerra.calculator.core.utils.CustomPagerAdapter
-import com.abecerra.calculator.presentation.account.BankAccountFragment
+import com.abecerra.calculator.presentation.home.HomeFragment
 import com.abecerra.calculator.presentation.finance.FinanceFragment
 import com.abecerra.calculator.presentation.statistics.StatisticsFragment
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation
@@ -23,7 +23,7 @@ class MainActivity : BaseActivity() {
     private fun setViews() {
         val pagerAdapter = CustomPagerAdapter(supportFragmentManager)
 
-        pagerAdapter.addFragments(BankAccountFragment(), getString(R.string.calculator))
+        pagerAdapter.addFragments(HomeFragment(), getString(R.string.home))
         pagerAdapter.addFragments(FinanceFragment(), getString(R.string.finance))
         pagerAdapter.addFragments(StatisticsFragment(), getString(R.string.statistics))
         viewPager.adapter = pagerAdapter

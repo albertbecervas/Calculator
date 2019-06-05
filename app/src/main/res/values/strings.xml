@@ -42,4 +42,7 @@
     <string name="statistics">Statistics</string>
     <string name="home">Home</string>
     <string name="about">About</string>
+    <string name="bank_sabadell">Banc Sabadell</string>
+    <string name="last_transactions">Last transactions</string>
+    <string name="general_error">An error occurred</string>
 </resources>

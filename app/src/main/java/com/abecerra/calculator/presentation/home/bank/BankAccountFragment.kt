@@ -1,4 +1,4 @@
-package com.abecerra.calculator.presentation.account
+package com.abecerra.calculator.presentation.home.bank
 
 
 import android.os.Bundle
@@ -14,8 +14,5 @@ class BankAccountFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_bank_account, container, false)
     }
-
-
-
 
 }
