@@ -1,7 +1,7 @@
 package com.abecerra.calculator.domain.repository
 
 import com.abecerra.calculator.data.dto.ResponseDto
-import com.abecerra.calculator.domain.data.TransactionModel
+import com.abecerra.calculator.domain.model.TransactionModel
 import io.reactivex.Single
 
 interface TransactionsRepository {

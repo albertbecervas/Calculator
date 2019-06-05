@@ -18,7 +18,7 @@ abstract class BaseFragment : Fragment() {
     protected fun showLoading() {
         view?.let { view ->
             view.findViewById<ProgressBar>(R.id.loadingBar)?.let {
-                it.visibility = View.GONE
+                it.visibility = View.VISIBLE
             }
         }
     }
@@ -26,7 +26,7 @@ abstract class BaseFragment : Fragment() {
     protected fun hideLoading() {
         view?.let { view ->
             view.findViewById<ProgressBar>(R.id.loadingBar)?.let {
-                it.visibility = View.VISIBLE
+                it.visibility = View.GONE
             }
         }
     }

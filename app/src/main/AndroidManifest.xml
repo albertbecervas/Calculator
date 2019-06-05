@@ -10,9 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.calculator.CalculatorActivity"></activity>
+        <activity android:name="com.abecerra.calculator.presentation.ui.calculator.CalculatorActivity"></activity>
         <activity
-            android:name=".presentation.main.MainActivity"
+            android:name="com.abecerra.calculator.presentation.ui.main.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
