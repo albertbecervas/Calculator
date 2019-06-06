@@ -1,10 +1,12 @@
 package com.abecerra.calculator.data.dto
 
-import java.util.*
+import com.squareup.moshi.Json
 
 data class TransactionDto(
-    var name: String = "TRASPASO",
-    var amount: String = "500€",
-    var date: String = Date().toString(),
-    var isReceived: Boolean = true
+    var id: String,
+    var name: String,
+    @Json(name = "money")
+    var amount: String,
+    var date: String,
+    var isReceived: Boolean
 )

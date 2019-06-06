@@ -68,6 +68,10 @@ class MainActivity : BaseActivity() {
                 viewPager.setCurrentItem(2, false)
                 true
             }
+            4 -> {
+                navigator.navigateToAbout()
+                false
+            }
             else -> false
         }
     }

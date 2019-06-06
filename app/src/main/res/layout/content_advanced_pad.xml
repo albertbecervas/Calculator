@@ -79,7 +79,7 @@
         <Button
             android:id="@+id/btFact"
             style="@style/PadAdvancedButton"
-            android:text="@string/fact_symbol" />
+            android:text="@string/elevation_symbol" />
     </LinearLayout>
 
 

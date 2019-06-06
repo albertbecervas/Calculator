@@ -1,6 +1,7 @@
 package com.abecerra.calculator.core.di
 
 import com.abecerra.calculator.BuildConfig
+import com.abecerra.calculator.data.api.TransactionsApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -13,7 +14,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiModule {
 
-    private const val BASE_URL = "https://"
+    private const val BASE_URL = "https://next.json-generator.com/"
     private const val CONNECT_TIMEOUT = 30L
     private const val READ_TIMEOUT = 30L
     private const val WRITE_TIMEOUT = 30L
@@ -22,7 +23,7 @@ object ApiModule {
         single { provideHttpClient() }
         single { provideMoshi() }
         single { provideRetrofit(get(), get()) }
-//        single { provideActivityDataService(get()) }
+        single { provideTransactionsService(get()) }
     }
 
     private fun provideHttpClient(): OkHttpClient {
@@ -50,8 +51,8 @@ object ApiModule {
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build()
 
-//    private fun provideActivityDataService(retrofit: Retrofit): ActivitiesDataService =
-//        retrofit.create(ActivitiesDataService::class.java)
+    private fun provideTransactionsService(retrofit: Retrofit): TransactionsApi =
+        retrofit.create(TransactionsApi::class.java)
 
 
 }
