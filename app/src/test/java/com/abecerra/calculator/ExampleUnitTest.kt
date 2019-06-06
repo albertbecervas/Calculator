@@ -12,9 +12,12 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         try {
-            print(Calculator.evaluate("sin()"))
+            print(Calculator.evaluate("2^2"))
         } catch (e: Exception) {
             print(e.message)
         }
     }
+
+    //todo test all functions
+
 }

@@ -1,27 +1,19 @@
 package com.abecerra.calculator.data.repository
 
+import com.abecerra.calculator.data.api.TransactionsApi
 import com.abecerra.calculator.data.dto.ResponseDto
-import com.abecerra.calculator.data.dto.TransactionDto
 import com.abecerra.calculator.data.dto.mapper.TransactionDtoMapper
 import com.abecerra.calculator.domain.model.TransactionModel
 import com.abecerra.calculator.domain.repository.TransactionsRepository
 import io.reactivex.Single
 
-class TransactionRepositoryImpl() : TransactionsRepository {
+class TransactionRepositoryImpl(private val api: TransactionsApi) : TransactionsRepository {
     override fun getTransactions(): Single<List<TransactionModel>> {
-        return Single.create {
-            Thread.sleep(3000L)
-            it.onSuccess(
-                TransactionDtoMapper.map(
-                    arrayListOf(
-                        TransactionDto(), TransactionDto(),
-                        TransactionDto(), TransactionDto(), TransactionDto(), TransactionDto(), TransactionDto(),
-                        TransactionDto(), TransactionDto(), TransactionDto(), TransactionDto(), TransactionDto()
-                    )
-                )
-            )
+        return api.getTransactions().flatMap {
+            Single.just(it.data)
+        }.map {
+            TransactionDtoMapper.map(it)
         }
-
     }
 
     override fun setTransaction(name: String, amount: String): Single<ResponseDto<String>> {
@@ -29,7 +21,6 @@ class TransactionRepositoryImpl() : TransactionsRepository {
             Thread.sleep(2000L)
             it.onError(Throwable())
         }
-
     }
 
 

@@ -1,5 +1,7 @@
 package com.abecerra.calculator.data.dto
 
+import com.squareup.moshi.Json
+
 data class ResponseDto<K>(
     var data: K?,
     var error: ErrorDto?,

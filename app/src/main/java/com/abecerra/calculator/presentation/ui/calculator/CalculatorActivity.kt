@@ -12,15 +12,18 @@ import com.abecerra.calculator.core.utils.extensions.Data
 import com.abecerra.calculator.core.utils.extensions.DataState
 import com.abecerra.calculator.core.utils.extensions.observe
 import com.abecerra.calculator.core.utils.extensions.toast
+import kotlinx.android.synthetic.main.activity_calculator.*
 import kotlinx.android.synthetic.main.content_advanced_pad.*
 import kotlinx.android.synthetic.main.content_display.*
 import kotlinx.android.synthetic.main.content_numeric_pad.*
-import kotlinx.android.synthetic.main.fragment_calculator.*
+import kotlinx.android.synthetic.main.fragment_calculator.drawerLayout
+import kotlinx.android.synthetic.main.fragment_calculator.ivArrow
+import kotlinx.android.synthetic.main.fragment_calculator.llAdvanced
+import kotlinx.android.synthetic.main.fragment_calculator.padContent
 import org.jetbrains.anko.childrenRecursiveSequence
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class CalculatorActivity : BaseActivity(), View.OnClickListener {
-
 
     private val viewModel: CalculatorViewModel by viewModel()
 
@@ -42,6 +45,10 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
         btDelete.setOnLongClickListener {
             viewModel.clearData()
             true
+        }
+
+        ivBack.setOnClickListener {
+            onBackPressed()
         }
 
         btDec.setOnClickListener {
