@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_gray"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/tvOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:layout_weight="4"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:gravity="end|bottom"
+        android:maxLines="3"
+        android:scrollIndicators="none"
+        android:scrollbars="vertical"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="@dimen/TextDisplayOperationSize"
+        tools:text="3*3" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:layout_weight="1"
+        android:gravity="end|center_vertical"
+        android:maxLines="1"
+        android:scrollIndicators="none"
+        android:scrollbars="vertical"
+        android:textAlignment="textEnd"
+        android:textColor="@color/original_blue"
+        android:textSize="@dimen/TextDisplayResultSize"
+        android:textStyle="bold"
+        tools:text="9" />
+
+</LinearLayout>

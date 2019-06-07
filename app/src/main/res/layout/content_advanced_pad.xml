@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btOpenPar"
+            style="@style/PadAdvancedButton"
+            android:text="@string/parenthesis_open_symbol" />
+
+        <Button
+            android:id="@+id/btClosePar"
+            style="@style/PadAdvancedButton"
+            android:text="@string/parenthesis_close_symbol" />
+
+        <Button
+            android:id="@+id/btSqrt"
+            style="@style/PadAdvancedButton"
+            android:text="@string/sqrt_symbol" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btSin"
+            style="@style/PadAdvancedButton"
+            android:text="@string/sin_symbol"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btCos"
+            style="@style/PadAdvancedButton"
+            android:text="@string/cos_symbol"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btTan"
+            style="@style/PadAdvancedButton"
+            android:text="@string/tan_symbol"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btLn"
+            style="@style/PadAdvancedButton"
+            android:text="@string/ln_symbol"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btLog"
+            style="@style/PadAdvancedButton"
+            android:text="@string/log_symbol"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btFact"
+            style="@style/PadAdvancedButton"
+            android:text="@string/elevation_symbol" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btDec"
+            style="@style/PadAdvancedButton"
+            android:text="@string/dec_symbol" />
+
+        <Button
+            android:id="@+id/btHex"
+            style="@style/PadAdvancedButton"
+            android:text="@string/hex_symbol" />
+
+        <Button
+            android:id="@+id/btBin"
+            style="@style/PadAdvancedButton"
+            android:text="@string/bin_symbol" />
+
+    </LinearLayout>
+
+</LinearLayout>
