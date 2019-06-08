@@ -12,6 +12,7 @@ import com.abecerra.calculator.core.utils.extensions.Data
 import com.abecerra.calculator.core.utils.extensions.DataState
 import com.abecerra.calculator.core.utils.extensions.observe
 import com.abecerra.calculator.core.utils.extensions.toast
+import com.abecerra.calculator.presentation.ui.calculator.history.CalculatorHistoryFragment
 import kotlinx.android.synthetic.main.activity_calculator.*
 import kotlinx.android.synthetic.main.content_advanced_pad.*
 import kotlinx.android.synthetic.main.content_display.*
@@ -38,6 +39,11 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun setViews() {
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.flHistory, CalculatorHistoryFragment())
+            .commit()
+
         drawerLayout.childrenRecursiveSequence().forEach { view ->
             if (view is Button) view.setOnClickListener(this)
         }
