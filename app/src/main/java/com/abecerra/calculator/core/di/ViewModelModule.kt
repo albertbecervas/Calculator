@@ -1,6 +1,7 @@
 package com.abecerra.calculator.core.di
 
 import com.abecerra.calculator.presentation.ui.calculator.CalculatorViewModel
+import com.abecerra.calculator.presentation.ui.calculator.history.CalculatorHistoryViewModel
 import com.abecerra.calculator.presentation.ui.home.bank.BankAccountViewModel
 import com.abecerra.calculator.presentation.ui.home.transactions.TransactionsViewModel
 import com.abecerra.calculator.presentation.ui.payment.PaymentViewModel
@@ -16,6 +17,7 @@ object ViewModelModule {
         viewModel { PaymentViewModel(get()) }
         viewModel { InterestCalculatorViewModel() }
         viewModel { CalculatorViewModel(get()) }
+        viewModel { CalculatorHistoryViewModel(get()) }
     }
 
 }
