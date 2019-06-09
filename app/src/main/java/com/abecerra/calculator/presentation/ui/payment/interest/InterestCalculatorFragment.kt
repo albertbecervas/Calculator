@@ -58,19 +58,19 @@ class InterestCalculatorFragment : BaseFragment() {
     }
 
     private fun clearResult() {
-        tvResult.text = getString(R.string.final_value, "")
-        tvInterest.text = getString(R.string.interest, "")
+        tvResult?.text = getString(R.string.final_value, "")
+        tvInterest?.text = getString(R.string.interest, "")
     }
 
     private fun updateCalculatedValue(data: Data<String>?) {
         data?.data?.let {
-            tvResult.text = it
+            tvResult?.text = it
         }
     }
 
     private fun updateCalculatedInterest(data: Data<String>?) {
         data?.data?.let {
-            tvResult.text = it
+            tvInterest?.text = it
         }
     }
 

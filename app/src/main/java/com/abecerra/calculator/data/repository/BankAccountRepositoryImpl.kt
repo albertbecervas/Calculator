@@ -1,7 +1,7 @@
 package com.abecerra.calculator.data.repository
 
-import com.abecerra.calculator.data.dto.BankAccountDto
-import com.abecerra.calculator.data.dto.mapper.BankAccountDtoMapper
+import com.abecerra.calculator.data.api.dto.BankAccountDto
+import com.abecerra.calculator.data.api.dto.mapper.BankAccountDtoMapper
 import com.abecerra.calculator.domain.model.BankAccountModel
 import com.abecerra.calculator.domain.repository.BankAccountRepository
 import com.google.firebase.firestore.FirebaseFirestore

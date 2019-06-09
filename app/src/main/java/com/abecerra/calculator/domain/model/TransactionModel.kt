@@ -4,7 +4,7 @@ import java.util.*
 
 data class TransactionModel(
     var name: String,
-    var amount: String,
+    var amount: Int,
     var date: Date,
     var isReceived: Boolean
 )

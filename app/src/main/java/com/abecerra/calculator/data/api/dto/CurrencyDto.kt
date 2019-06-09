@@ -1,4 +1,4 @@
-package com.abecerra.calculator.data.dto
+package com.abecerra.calculator.data.api.dto
 
 data class CurrencyDto(
     val id: String,

@@ -59,4 +59,8 @@
     <string name="github">Github</string>
     <string name="github_link">github.com/albertbecervas/Calculator</string>
     <string name="explanation">App developed for the technical test of:</string>
+    <string name="transactions_balance">Transactions balance</string>
+    <string name="all">All</string>
+    <string name="income">Income</string>
+    <string name="expenses">Expenses</string>
 </resources>
