@@ -1,4 +1,4 @@
-package com.abecerra.calculator.data.dto
+package com.abecerra.calculator.data.api.dto
 
 import com.abecerra.calculator.core.utils.extensions.beautify
 

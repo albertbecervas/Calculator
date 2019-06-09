@@ -1,8 +1,8 @@
 package com.abecerra.calculator.data.repository
 
 import com.abecerra.calculator.data.api.TransactionsApi
-import com.abecerra.calculator.data.dto.ResponseDto
-import com.abecerra.calculator.data.dto.mapper.TransactionDtoMapper
+import com.abecerra.calculator.data.api.dto.ResponseDto
+import com.abecerra.calculator.data.api.dto.mapper.TransactionDtoMapper
 import com.abecerra.calculator.domain.model.TransactionModel
 import com.abecerra.calculator.domain.repository.TransactionsRepository
 import io.reactivex.Single

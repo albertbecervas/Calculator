@@ -1,8 +1,8 @@
-package com.abecerra.calculator.data.dto.mapper
+package com.abecerra.calculator.data.api.dto.mapper
 
 import com.abecerra.calculator.core.base.BaseMapper
 import com.abecerra.calculator.core.encryption.EncryptionHelper
-import com.abecerra.calculator.data.dto.BankAccountDto
+import com.abecerra.calculator.data.api.dto.BankAccountDto
 import com.abecerra.calculator.domain.model.BankAccountModel
 
 object BankAccountDtoMapper : BaseMapper<BankAccountDto, BankAccountModel>() {

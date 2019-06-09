@@ -17,10 +17,6 @@ import kotlinx.android.synthetic.main.activity_calculator.*
 import kotlinx.android.synthetic.main.content_advanced_pad.*
 import kotlinx.android.synthetic.main.content_display.*
 import kotlinx.android.synthetic.main.content_numeric_pad.*
-import kotlinx.android.synthetic.main.fragment_calculator.drawerLayout
-import kotlinx.android.synthetic.main.fragment_calculator.ivArrow
-import kotlinx.android.synthetic.main.fragment_calculator.llAdvanced
-import kotlinx.android.synthetic.main.fragment_calculator.padContent
 import org.jetbrains.anko.childrenRecursiveSequence
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -44,7 +40,11 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
             .replace(R.id.flHistory, CalculatorHistoryFragment())
             .commit()
 
-        drawerLayout.childrenRecursiveSequence().forEach { view ->
+        contentAdvancedPad?.childrenRecursiveSequence()?.forEach { view ->
+            if (view is Button) view.setOnClickListener(this)
+        }
+
+        padContent?.childrenRecursiveSequence()?.forEach { view ->
             if (view is Button) view.setOnClickListener(this)
         }
 
@@ -58,36 +58,48 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
         }
 
         btDec.setOnClickListener {
-            val decResult = viewModel.result.value?.data
-            decResult?.let {
-                tvResult.text = it.toString()
-            }
+            setDecResult()
         }
         btHex.setOnClickListener {
 
-            if (tvResult.text.isNotBlank()) {
-                val decResult = viewModel.result.value?.data
-                decResult?.let {
-                    val hexResult = Integer.toHexString(it.toInt())
-                    tvResult.text = hexResult
-                }
-            }
+            setHexResult()
 
         }
         btBin.setOnClickListener {
 
-            val decResult = viewModel.result.value?.data
-            decResult?.let {
-                val hexResult = Integer.toBinaryString(it.toInt())
-                tvResult.text = hexResult
-            }
+            setBinResult()
         }
 
         setAdvancedPad()
     }
 
+    private fun setBinResult() {
+        val decResult = viewModel.result.value?.data
+        decResult?.let {
+            val hexResult = Integer.toBinaryString(it.toInt())
+            tvResult.text = hexResult
+        }
+    }
+
+    private fun setHexResult() {
+        if (tvResult.text.isNotBlank()) {
+            val decResult = viewModel.result.value?.data
+            decResult?.let {
+                val hexResult = Integer.toHexString(it.toInt())
+                tvResult.text = hexResult
+            }
+        }
+    }
+
+    private fun setDecResult() {
+        val decResult = viewModel.result.value?.data
+        decResult?.let {
+            tvResult.text = it.toString()
+        }
+    }
+
     private fun setAdvancedPad() {
-        llAdvanced.setOnClickListener {
+        llAdvanced?.setOnClickListener {
             if (drawerLayout.isDrawerOpen(Gravity.END)) {
                 drawerLayout.closeDrawer(Gravity.END)
             } else {
@@ -105,12 +117,12 @@ class CalculatorActivity : BaseActivity(), View.OnClickListener {
 
                 override fun onDrawerClosed(drawerView: View) {
                     super.onDrawerClosed(drawerView)
-                    ivArrow.rotation = ivArrow.rotation + 180
+                    ivArrow?.rotation = ivArrow?.rotation ?: 0f + 180
                 }
 
                 override fun onDrawerOpened(drawerView: View) {
                     super.onDrawerOpened(drawerView)
-                    ivArrow.rotation = ivArrow.rotation + 180
+                    ivArrow?.rotation = ivArrow?.rotation ?: 0f + 180
                 }
             }
 

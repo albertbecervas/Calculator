@@ -1,7 +1,7 @@
 package com.abecerra.calculator.data.api
 
-import com.abecerra.calculator.data.dto.ResponseDto
-import com.abecerra.calculator.data.dto.TransactionDto
+import com.abecerra.calculator.data.api.dto.ResponseDto
+import com.abecerra.calculator.data.api.dto.TransactionDto
 import io.reactivex.Single
 import retrofit2.http.GET
 

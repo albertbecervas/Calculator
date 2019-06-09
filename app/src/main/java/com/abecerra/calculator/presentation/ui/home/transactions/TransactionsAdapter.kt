@@ -18,15 +18,15 @@ class TransactionsAdapter : BaseAdapter<TransactionsAdapter.TransactionViewHolde
         with(holder) {
             name.text = item.name
             date.text = item.date
+            val amountText = "${item.amount} €"
+            amount.text = amountText
 
             if (item.isReceived) {
                 Glide.with(transaction.context).load(R.drawable.ic_trans_enter).into(transaction)
-                amount.text = item.amount
             } else {
                 Glide.with(transaction.context).load(R.drawable.ic_trans_out).into(transaction)
-                val negativeAmount = "-${item.amount}"
-                amount.text = negativeAmount
             }
+
         }
     }
 
