@@ -12,6 +12,7 @@ object AppModule {
             RepositoryModule.get(),
             ApiModule.get(),
             NavigatorModule.get(),
+            DatabaseModule.get(),
             module { single { AppSharedPreferences.getInstance() } }
         )
 }

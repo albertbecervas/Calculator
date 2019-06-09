@@ -14,25 +14,27 @@
         app:umanoPanelHeight="40dp"
         app:umanoShadowHeight="0dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
 
             <include
                 android:id="@+id/layoutDisplay"
                 layout="@layout/content_display"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <android.support.v4.widget.DrawerLayout
                 android:id="@+id/drawerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/layoutDisplay"
+                android:layout_weight="4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layoutDisplay">
 
@@ -54,31 +56,19 @@
                         layout="@layout/content_operations_pad"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_toStartOf="@id/llAdvanced" />
+                        android:layout_toStartOf="@id/layoutAdvanced" />
 
-                    <LinearLayout
-                        android:id="@+id/llAdvanced"
-                        android:layout_width="30dp"
+                    <include
+                        android:id="@+id/layoutAdvanced"
+                        layout="@layout/content_advanced_pad"
+                        android:layout_width="500dp"
                         android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:background="@color/gray"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/ivArrow"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_arrow_left" />
-
-                    </LinearLayout>
+                        android:layout_alignParentEnd="true" />
 
                 </RelativeLayout>
 
-                <include layout="@layout/layout_drawer" />
-
             </android.support.v4.widget.DrawerLayout>
-        </RelativeLayout>
+        </LinearLayout>
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"

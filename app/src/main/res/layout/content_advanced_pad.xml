@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/contentAdvancedPad"
     android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
     android:weightSum="4">
 

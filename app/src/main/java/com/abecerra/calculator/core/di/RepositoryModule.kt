@@ -15,7 +15,7 @@ object RepositoryModule {
     fun get() = module {
         single<BankAccountRepository> { BankAccountRepositoryImpl() }
         single<TransactionsRepository> { TransactionRepositoryImpl(get()) }
-        single<MathRepository> { MathRepositoryImpl() }
+        single<MathRepository> { MathRepositoryImpl(get()) }
         single<CurrencyRepository> { CurrencyRepositoryImpl(get()) }
     }
 

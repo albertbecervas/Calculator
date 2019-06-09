@@ -18,7 +18,9 @@ object TransactionMapper : BaseMapper<TransactionModel, Transaction>() {
     }
 
     override fun map(from: Collection<TransactionModel>): List<Transaction> {
-        return super.map(from).sortedBy { it.date }
+        return super.map(from.sortedByDescending {
+            it.date.time
+        })
     }
 
 }
