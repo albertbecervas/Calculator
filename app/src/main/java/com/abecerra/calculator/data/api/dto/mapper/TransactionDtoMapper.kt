@@ -13,7 +13,7 @@ object TransactionDtoMapper : BaseMapper<TransactionDto, TransactionModel>() {
                 name = name,
                 date = DateFormatter.formatTransactionToDate(date),
                 isReceived = isReceived,
-                amount = if (isReceived) -amount else amount
+                amount = if (isReceived) amount else -amount
             )
         }
     }

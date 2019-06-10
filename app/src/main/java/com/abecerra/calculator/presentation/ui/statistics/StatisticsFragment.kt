@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.abecerra.calculator.R
 import com.abecerra.calculator.core.base.BaseFragment
+import com.abecerra.calculator.core.math.DayAxisValueFormatter
 import com.abecerra.calculator.core.utils.extensions.Data
 import com.abecerra.calculator.core.utils.extensions.DataState
 import com.abecerra.calculator.core.utils.extensions.observe
@@ -30,6 +31,8 @@ class StatisticsFragment : BaseFragment() {
     private enum class FILTER { All, Income, Expenses }
 
     private val viewModel: StatisticsViewModel by viewModel()
+
+    private val labels = arrayListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,7 +108,6 @@ class StatisticsFragment : BaseFragment() {
             setPinchZoom(false)
             axisRight.isEnabled = false
             legend.isEnabled = false
-            setMaxVisibleValueCount(10)
         }
 
 
@@ -124,9 +126,14 @@ class StatisticsFragment : BaseFragment() {
 
     private fun XAxis.setXAxis() {
         position = XAxisPosition.BOTTOM
-        setDrawLabels(false)
         setDrawGridLines(false)
         setDrawAxisLine(false)
+        textColor = Color.LTGRAY
+        textSize = 13f
+        labelCount = 5
+        setCenterAxisLabels(true)
+        granularity = 1f
+        valueFormatter = DayAxisValueFormatter(chart)
 
     }
 
@@ -146,6 +153,7 @@ class StatisticsFragment : BaseFragment() {
                 val d = dataList[i]
                 val entry = BarEntry(i.toFloat(), d.amount.toFloat())
                 values.add(entry)
+                labels.add(d.amount.toString())
 
                 // specific colors
                 if (d.amount.toFloat() >= 0)
