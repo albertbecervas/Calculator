@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.abecerra.calculator.R
 import com.abecerra.calculator.core.base.BaseFragment
 import com.abecerra.calculator.presentation.ui.payment.interest.InterestCalculatorFragment
+import com.abecerra.calculator.presentation.ui.payment.loan.LoanCalculatorFragment
 import kotlinx.android.synthetic.main.fragment_payment.*
 
 class PaymentFragment : BaseFragment() {
@@ -23,6 +24,7 @@ class PaymentFragment : BaseFragment() {
 
         childFragmentManager.beginTransaction()
             .replace(R.id.flInterestCalculator, InterestCalculatorFragment())
+            .replace(R.id.flLoanCalculator, LoanCalculatorFragment())
             .commit()
 
     }

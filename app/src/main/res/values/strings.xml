@@ -63,4 +63,7 @@
     <string name="all">All</string>
     <string name="income">Income</string>
     <string name="expenses">Expenses</string>
+    <string name="loan_calculator">Loan Calculator</string>
+    <string name="loan">Loan</string>
+    <string name="monthly_pay">MONTHLY PAY: %s</string>
 </resources>

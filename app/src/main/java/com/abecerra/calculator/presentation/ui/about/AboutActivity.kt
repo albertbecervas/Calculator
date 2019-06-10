@@ -13,6 +13,7 @@ class AboutActivity : BaseActivity() {
         setContentView(R.layout.activity_about)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close)
 
         tvVersion.text = BuildConfig.VERSION_NAME
 
