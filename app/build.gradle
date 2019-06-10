@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'io.fabric'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -85,6 +87,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.9'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
     implementation 'com.google.firebase:firebase-firestore:19.0.2'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
     // Other Libraries
     implementation 'com.jakewharton.timber:timber:4.7.1' // Logging
